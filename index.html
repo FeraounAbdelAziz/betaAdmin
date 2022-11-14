@@ -14,6 +14,16 @@
         function Category(){}
         function Authors(){}
         function Adherents(){}
+        function sideBarToggle(){
+            var x = document.getElementById("side-nav-move");
+                if (x.style.width === "0vw") {
+                    x.style.width = "100vw"
+                    x.style.left = "0px"
+                } else {
+                    x.style.width = "0vw";
+                    x.style.left = "-16px"
+                }
+        }
     </script>
 </head>
 <body>
@@ -21,7 +31,7 @@
             <div class="navbar-crud-flex">
                 <div class="dashboard-admin-container">
                     <div class="admin-bar-icon">
-                        <i class="fa fa-bars icon-burger" aria-hidden="true"></i>
+                        <i class="fa fa-bars icon-burger" onclick="sideBarToggle()" aria-hidden="true"></i>
                     </div>
                     <div class="search-bar">
                         <input class="search-input" type="text" placeholder="Search here ...">
@@ -166,15 +176,15 @@
                 </table>
                 </div>
             </div>
-            <div class="side-nav">
-                <h2 class="side-nav-title">ADMIN DASHBOARD</h2>
-                <ul class="side-nav-ul">
-                    <li class="side-nav-ul-li">Dashboard <i class="fa fa-chevron-right" aria-hidden="true"></i></li>
-                    <li class="side-nav-ul-li">Books<i class="fa fa-chevron-right" aria-hidden="true"></i></li>
-                    <li class="side-nav-ul-li">Category<i class="fa fa-chevron-right" aria-hidden="true"></i></li>
-                    <li class="side-nav-ul-li">Authors<i class="fa fa-chevron-right" aria-hidden="true"></i></li>
-                    <li class="side-nav-ul-li">Adherents<i class="fa fa-chevron-right" aria-hidden="true"></i></li>
-                </ul>
+            <div class="side-nav" id="side-nav-move">
+                    <h2 class="side-nav-title">ADMIN DASHBOARD</h2>
+                    <ul class="side-nav-ul">
+                        <li class="side-nav-ul-li">Dashboard <i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                        <li class="side-nav-ul-li">Books<i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                        <li class="side-nav-ul-li">Category<i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                        <li class="side-nav-ul-li">Authors<i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                        <li class="side-nav-ul-li">Adherents<i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                    </ul>
             </div>
         </div>
 </body>
