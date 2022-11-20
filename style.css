@@ -11,7 +11,7 @@
     justify-content:left ;
 }
 .side-nav {
-    background-color:  #688d8d; ;
+    background-color:rgb(42, 182, 42); ;
     width: 20vw;
     height: 100vh;
     display: flex;
@@ -33,18 +33,18 @@
     color: #f7f7f7;
     padding: 15px;
     width: 15vw;
-    font-size: 1.1vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 15px;
     justify-content: space-between;
     border-radius: 15px;
+    font-size: 1.1vw;
     border: 1.5px #f7f7f7 solid ;
 }
 .side-nav .side-nav-ul-li:hover {
-    color: black;
-    border: 1.5px #000 solid ;
+    color: #141414;
+    border: 1.5px #141414 solid ;
     background-color: #677d8d;
     transition: all .6s;
 }
@@ -62,7 +62,8 @@
     align-items: center; 
     width: 81.2vw;
     padding: 16px 5vw;
-    background-color: #8255ff;
+        background-color: rgb(52, 218, 52);
+    border: 2px solid rgb(46,150,46);
 }
 .dashboard-admin-container .admin-bar-icon {
     display: none;
@@ -78,7 +79,7 @@
     outline: none;
 }
 .dashboard-admin-container .search-bar .search-input::placeholder{
-    color: white;
+    color: black;
     opacity: 1;
 }
 .dashboard-admin-container .search-bar .search-input:focus::placeholder{
@@ -102,7 +103,7 @@
     transition:all  .6s;
 }
 .admin-bar .settings:hover,.notifications:hover {
-    color: white;
+    color: #393939;
     border: 1.5px solid white;
 
 }
@@ -112,6 +113,8 @@
     margin: 2.5vw;
     padding: .5rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .dashboard-table {
     display: block;
@@ -155,18 +158,49 @@
 .dashboard-table tr .btn-offline {
     background-color: rgb(255, 76, 76) ;
 }
+/*dashboard-statistics*/
+.dashboard .dashboard-statistics {
+    height: 80vh;
+    width: 70vw;
+    padding: 1vw;
+    display: grid;
+    grid-gap: 5vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+.dashboard .dashboard-statistics .stats  {
+    width: 20vw;
+    height: 18vw;
+    padding: 1vw;
+    text-align: center;
+    background-color:transparent;
+    border-radius: 15px;
+    font-size: 1.1vw;
+    border: 2px rgb(46,150,46) solid ;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.dashboard .dashboard-statistics .stats i {
+    font-size: 1.7rem;
+}
+.dashboard .dashboard-statistics .stats > * {
+    color: #393939;
+    margin-bottom: 1vw;
+}
 /*END ADMIN CRUD*/
 @media only screen and (max-width: 868px) and (min-width:200px) {
 
     .side-nav {
         position: absolute;
         display: inline-block;
-        top: 10vh;
+        top: 12.5vh;
         left: -16px;
         align-items: center;
         transition: width 2s;
-        background-color:  #688d8d; 
+        background-color:  rgb(42, 182, 42); 
         width: 0vw;
         height: 100vh;
         display: flex;
@@ -194,16 +228,17 @@
         width: 50vw;
         padding: 15px;
         margin-bottom: 15px;
-        border-radius:0px;
-        border: none ;
+
+        border: 1.5px solid white;
+        border-radius:99px;
+        
         color: #f7f7f7;
         font-size: 2.7vw;
         cursor: pointer;
     }
     .side-nav .side-nav-ul-li:hover {
-        border: none;
         background-color: transparent;
-        color: black;
+        color: #141414;
         transition: all .6s;
     }
     .side-nav .side-nav-ul-li i{
@@ -218,6 +253,7 @@
         width: 100vw;
         height: 10vh;
         padding: 40px;
+        background-color: rgb(52, 218, 52);
     }
     .dashboard-admin-container .admin-bar-icon {
         display: block;
@@ -226,7 +262,7 @@
         margin-right: 3.5vw;
     }
     .dashboard-admin-container .admin-bar-icon:hover {
-        color: white;
+        color: #393939;
     }
     .dashboard-admin-container .search-bar .search-input {
         width: 100%;
@@ -239,7 +275,7 @@
         outline: none;
     }
     .dashboard-admin-container .search-bar .search-input::placeholder{
-        color: white;
+        color: black;
         opacity: 1;
     }
     .admin-bar .settings,.notifications {
@@ -258,12 +294,26 @@
         align-items: center;
         margin: 0vw;
         padding: 0rem;
-        padding-left: 0.1rem;
-        padding-top: 1rem;
-}
+    }
 
     .dashboard .dashboard-table{
         width: 93vw;
+    }
+    /*dash static*/
+
+    
+    .dashboard .dashboard-statistics {
+        display: grid;
+        grid-template-columns:  auto;
+        justify-content: space-around;
+        overflow-y: scroll;
+        width: 100vw;
+        height: 90vh;
+    }
+    .dashboard .dashboard-statistics .stats {
+        width: 50vw;
+        height: 40vw;
+        font-size: .9rem;
     }
 }
 
